@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+
+div
+
+{
+    height: 50%;
+    width: 50%;
+    margin: 25% 25%;
+}
+
+table
+
+{
+    margin-left: 100px;
+}
+            form{
+                text-align: center;
+            }
+            tr th{
+                text-align: right;
+                height: 30px;
+                font-size: 15px;
+            }
+            input{
+                height: 30px;
+                font-size: 15px;
+            }
+            button {
+        height: 55px;
+        width: 150px;
+        background-color: orange;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+            }
+        </style>
+    </head>
+  <body>
+      <div>
+      <form action = "/adddataintodb" modelAttribute="userFormData">
+    <table>
+      <tr>
+        <th>Employee ID :</th>
+        <th>
+          <input type="number" name="employeeId" />
+        </th>
+      </tr>
+      <tr>
+        <th>Employee Name :</th>
+        <th>
+          <input type="text" name="employeeName" />
+        </th>
+      </tr>
+      <tr>
+        <th>Employee Salary :</th>
+        <th>
+          <input type="number" name="employeeSalary" />
+        </th>
+      </tr>
+      <tr>
+        <th>Employee Address :</th>
+        <th>
+          <input type="text" name="employeeAddress" />
+        </th>
+      </tr>
+      <tr>
+        <th>Employee Age :</th>
+        <th>
+          <input type="number" name="employeeAge" />
+        </th>
+      </tr>
+    </table>
+    <br><br> <button type="submit"> Add User </button>
+</div>
+</form>
+  </body>
+</html>

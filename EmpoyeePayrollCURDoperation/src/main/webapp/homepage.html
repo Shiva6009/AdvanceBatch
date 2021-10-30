@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <style>
+      body {
+        background-color: gainsboro;
+      }
+      h1 {
+        text-align: center;
+        padding-top: 30px;
+      }
+      #menucontentpanel {
+        height: 50%;
+        margin-left: 37%;
+        margin-top: 15%;
+        width: 40%;
+      }
+      button {
+        height: 55px;
+        width: 150px;
+        background-color: orange;
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 16px;
+        margin-top: 15px;
+        margin-left: 55px;
+      }
+    </style>
+    <script>
+    
+    
+    function adduser()
+    {
+    	System.out.println(" Inside JS Function..");
+    	  var xhttp = new XMLHttpRequest();
+    	  xhttp.onreadystatechange = function() {
+    	    if (this.readyState == 4 && this.status == 200) {
+    	     document.getElementById("demo").innerHTML = this.responseText;
+    	    }
+    	  };
+    	  
+    	  xhttp.open("POST", "http://localhost:8080/addemployee", true);
+    	  xhttp.send();
+    }
+    </script>
+  </head>
+  <body>
+    <h1>Welcome to Employee Payrole Application</h1>
+    
+    <div id="menucontentpanel">
+      <form action="/addemployee">
+        <button id="addUser" type="submit">Add User</button>
+      </form>
+      
+      <form action="/addemployee">
+        <button id="deleteUser">Delete User</button>
+      </form>
+      
+        <button id="updateUser" onclick="adduser()" >Update User</button>
+ 
+      <form action="/fetchusers">
+        <button id="fetchUser">Fetch Users</button>
+      </form>
+    </div>
+  </body>
+</html>
